@@ -11,9 +11,8 @@ type HuggingFaceError = {
   error?: string;
   estimated_time?: number;
 };
-
 const DEFAULT_PLANT_MODEL =
-  "linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification";
+  "google/vit-base-patch16-224";
 
 export async function classifyPlantImage(buffer: Buffer, mimeType: string) {
   const apiKey = process.env.HUGGINGFACE_API_KEY;
